@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  frontend:
+    build: ./frontend/
+    container_name: gf-frontend
+    ports:
+      - '3000:3000'
+    restart: on-failure
+    volumes:
+      - ./frontend:/usr/src/app
